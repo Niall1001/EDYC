@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html, body, #app, #app>div {
+  height: 100%
+}
+
+.app {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  justify-content: center;
+}
+
+/*
+Navbar css
+*/
+.home-button-nav {
+  display: flex;
+  align-items: flex-end
+}
+
+/*
+Home page css
+*/
+.home-text {
+  justify-content: center;
+  display: flex;
+  flex-flow: center;
+  margin-top: 3em;
+}
