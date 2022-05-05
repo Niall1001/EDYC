@@ -1,3 +1,7 @@
-export default {
-	HOME: "/",
-};
+function navigation(){
+	return (
+		{HOME: "/"}
+	)
+}
+
+export default navigation;
