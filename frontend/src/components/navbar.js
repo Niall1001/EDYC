@@ -59,7 +59,7 @@ const handleOpenNavMenu = (event) => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            LOGO
+          <NavLink to='/' style={{ textDecoration: 'none' }}>LOGO</NavLink>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -95,7 +95,7 @@ const handleOpenNavMenu = (event) => {
             >
               {pages.map(({name, url}) => (
                 <MenuItem key={name} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{name}</Typography>
+                  <NavLink to={url} style={{ textDecoration: 'none' }}>{name}</NavLink>
                 </MenuItem>
               ))}
             </Menu>
@@ -107,16 +107,16 @@ const handleOpenNavMenu = (event) => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            LOGO
+          <NavLink to='/' style={{ textDecoration: 'none' }}>LOGO</NavLink>
           </Typography>
-          <Box className = "nav" style={{ color: '#0000FF' }} sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box className = "nav" style={{ textDecoration: 'none', color: '#0000FF' }} sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map(({name, url}) => (
               <Button
-                style={{ color: '#0000FF'}}
+                style={{ color: '#0000FF', textDecoration: 'none' }}
                 key={name}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <NavLink to={url}>{name}</NavLink>
+              <NavLink to={url} style={{ textDecoration: 'none' }}>{name}</NavLink>
               </Button>
             ))}
           </Box>
