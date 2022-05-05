@@ -9,8 +9,33 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import { NavLink } from "react-router-dom";
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = [
+  {
+  name: 'Our Club',
+  url: "/our-club"
+  },
+  {
+  name: 'Events',
+  url: "/events"
+  },
+  {
+  name: 'Membership',
+  url: "/membership"
+  },
+  {
+  name: 'Contact',
+  url: "/contact"
+  },
+  {
+  name: 'On The Water',
+  url: "/on-the-water"
+  },
+  {
+  name: 'Sailing schools info',
+  url: "/sailing-school"
+  }];
 
 const Navbar = () => {
 const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -24,10 +49,11 @@ const handleOpenNavMenu = (event) => {
   };
 
 	return (
-		<AppBar position="static">
+		<AppBar position="static" style={{ background: '#FFFFFF' }} elevation={0}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
+            style={{ color: '#0000FF' }}
             variant="h6"
             noWrap
             component="div"
@@ -38,6 +64,7 @@ const handleOpenNavMenu = (event) => {
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
+              style={{ color: '#0000FF' }}
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -45,9 +72,10 @@ const handleOpenNavMenu = (event) => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon style={{ color: '#0000FF' }}/>
             </IconButton>
             <Menu
+              style={{ color: '#0000FF' }}
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -65,14 +93,15 @@ const handleOpenNavMenu = (event) => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {pages.map(({name, url}) => (
+                <MenuItem key={name} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
           <Typography
+            style={{ color: '#0000FF' }}
             variant="h6"
             noWrap
             component="div"
@@ -80,14 +109,14 @@ const handleOpenNavMenu = (event) => {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+          <Box className = "nav" style={{ color: '#0000FF' }} sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            {pages.map(({name, url}) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                style={{ color: '#0000FF'}}
+                key={name}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                <NavLink to={url}>{name}</NavLink>
               </Button>
             ))}
           </Box>

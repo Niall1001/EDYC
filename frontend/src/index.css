@@ -16,6 +16,10 @@ html, body, #app, #app>div {
   height: 100%
 }
 
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+}
 .app {
   display: flex;
   flex-flow: column;
