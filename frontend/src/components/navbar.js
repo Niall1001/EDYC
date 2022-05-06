@@ -10,6 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { NavLink } from "react-router-dom";
+import edycLogo from "../images/edyclogo.jpg";
 
 const pages = [
   {
@@ -61,13 +62,17 @@ const Navbar = () => {
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
             <NavLink to="/" style={{ textDecoration: "none" }}>
-              LOGO
+              <img
+                src={edycLogo}
+                loading="lazy"
+                style={{ maxHeight: "50px", maxWidth: "50px" }}
+              />
             </NavLink>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
-              style={{ color: "#0000FF" }}
+              style={{ color: "#83314E" }}
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -75,10 +80,10 @@ const Navbar = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon style={{ color: "#0000FF" }} />
+              <MenuIcon style={{ color: "#83314E" }} />
             </IconButton>
             <Menu
-              style={{ color: "#0000FF" }}
+              style={{ color: "#83314E" }}
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -97,23 +102,33 @@ const Navbar = () => {
               }}
             >
               {pages.map(({ name, url }) => (
-                <MenuItem key={name} onClick={handleCloseNavMenu}>
-                  <NavLink to={url} style={{ textDecoration: "none" }}>
+                <NavLink
+                  to={url}
+                  style={{ textDecoration: "none", color: "#83314E" }}
+                >
+                  <MenuItem key={name} onClick={handleCloseNavMenu}>
                     {name}
-                  </NavLink>
-                </MenuItem>
+                  </MenuItem>
+                </NavLink>
               ))}
             </Menu>
           </Box>
           <Typography
-            style={{ color: "#0000FF" }}
+            style={{ color: "#83314E" }}
             variant="h6"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            <NavLink to="/" style={{ textDecoration: "none" }}>
-              LOGO
+            <NavLink
+              to="/"
+              style={{ textDecoration: "none", color: "#83314E" }}
+            >
+              <img
+                src={edycLogo}
+                loading="lazy"
+                style={{ maxHeight: "50px", maxWidth: "50px" }}
+              />
             </NavLink>
           </Typography>
           <Box
@@ -124,7 +139,7 @@ const Navbar = () => {
             {pages.map(({ name, url }) => (
               <NavLink to={url} style={{ textDecoration: "none" }}>
                 <Button
-                  style={{ color: "#0000FF", textDecoration: "none" }}
+                  style={{ color: "#83314E", textDecoration: "none" }}
                   key={name}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >

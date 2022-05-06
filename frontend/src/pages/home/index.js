@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import React from "react";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
-import { About } from "./components";
+import { About, FindUs } from "./components";
 
 const Home = () => {
   const Item = styled(Paper)(({ theme }) => ({
@@ -16,17 +16,12 @@ const Home = () => {
     <div>
       <Grid container spacing={5}>
         <Grid item xs={12} md={12} style={{ margin: "20px" }}>
-          <Item>
-            <About />
-          </Item>
+          <About />
         </Grid>
-        <Grid item xs={6} md={4}>
-          <Item>xs=6 md=4</Item>
+        <Grid item xs={12} md={12} style={{ margin: "20px" }}>
+          <FindUs />
         </Grid>
-        <Grid item xs={6} md={4}>
-          <Item>xs=6 md=4</Item>
-        </Grid>
-        <Grid item xs={6} md={8}>
+        <Grid item xs={12} md={12} style={{ margin: "20px" }}>
           <Item>xs=6 md=8</Item>
         </Grid>
       </Grid>
