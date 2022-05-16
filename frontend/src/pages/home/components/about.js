@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
-import Paper from "@mui/material/Paper";
+import { Paper, Button } from "@mui/material";
 import { Grid } from "@mui/material";
 import eastDown from "../../../images/east-down.jpg";
 
@@ -22,17 +22,27 @@ const About = () => {
               height: "96%",
               display: "flex",
               justifyContent: "center",
+              alignItems: "center",
               flexFlow: "column",
             }}
           >
             <div
-              style={{ fontSize: "20", fontWeight: "bold", color: "#83314E" }}
+              style={{
+                fontSize: "20",
+                fontWeight: "bold",
+              }}
             >
               About us!
             </div>
             East Down Yacht Club (EDYC) has extensive facilities for both
             cruising and racing. It is located on the western shores of
             Strangford Lough, Co Down, Northern Ireland.
+            <Button
+              variant="contained"
+              style={{ backgroundColor: "#83314E", maxWidth: "61%" }}
+            >
+              Learn more about our Club!
+            </Button>
           </Item>
         </Grid>
         <Grid item xs={12} md={8}>

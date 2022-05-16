@@ -11,12 +11,14 @@ const FindUs = () => {
     textAlign: "center",
     color: theme.palette.text.secondary,
   }));
+
   return (
-    <div>
-      <Item>
-        <GoogleMap />
-      </Item>
-    </div>
+    <Item sx={{ height: "100%" }}>
+      <div style={{ fontSize: "20", fontWeight: "bold", color: "#83314E" }}>
+        Find us!
+      </div>
+      <GoogleMap />
+    </Item>
   );
 };
 

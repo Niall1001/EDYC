@@ -1,0 +1,2 @@
+INSERT INTO public.News (name, date, description, imageSource, text)
+VALUES ('Random Name 1', '2nd March 2021', 'This is a short description', 'http://127.0.0.1:3000/images/1', 'This is the text of the blog, I need to think about how to format this when a user opens the page. Hmmmmmm........ THinking is hard tho...... no idea how to do it');
